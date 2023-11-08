@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.Jmall.domain.BoardVO;
-import com.Jmall.domain.Criteria;
+import com.Jmall.dto.Criteria;
 import com.Jmall.mapper.BoardMapper;
 
 import lombok.RequiredArgsConstructor;

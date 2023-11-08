@@ -75,8 +75,7 @@
 									</div>
 									<div class="form-group">
 										<label for="writer">Writer</label> <input type="text"
-											class="form-control" name="writer" id="writer"
-											placeholder="작성자 입력...">
+											class="form-control" name="writer" id="writer" placeholder=${member.mbsp_id}>
 									</div>
 									<div class="form-group">
 										<label>Content</label>

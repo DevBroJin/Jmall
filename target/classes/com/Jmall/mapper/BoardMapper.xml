@@ -38,7 +38,7 @@
 	
 	
 	<!--  CDATA 섹션 -->
-	<select id="getListWithPaging" resultType="com.Jmall.domain.BoardVO" parameterType="com.Jmall.domain.Criteria">
+	<select id="getListWithPaging" resultType="com.Jmall.domain.BoardVO" parameterType="com.Jmall.dto.Criteria">
 		<![CDATA[
 		select 
     		bno, title, content, writer, regdate, updateddate, viewcount

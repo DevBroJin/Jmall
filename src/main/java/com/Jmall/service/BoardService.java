@@ -3,7 +3,7 @@ package com.Jmall.service;
 import java.util.List;
 
 import com.Jmall.domain.BoardVO;
-import com.Jmall.domain.Criteria;
+import com.Jmall.dto.Criteria;
 
 // 인터페이스는 @Service 애노테이션 사용 안함.
 public interface BoardService {

@@ -1,5 +1,7 @@
 package com.Jmall.domain;
 
+import com.Jmall.dto.Criteria;
+
 import lombok.Getter;
 import lombok.ToString;
 

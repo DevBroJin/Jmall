@@ -4,7 +4,7 @@ package com.Jmall.mapper;
 import java.util.List;
 
 import com.Jmall.domain.BoardVO;
-import com.Jmall.domain.Criteria;
+import com.Jmall.dto.Criteria;
 
 //인터페이스
 /*

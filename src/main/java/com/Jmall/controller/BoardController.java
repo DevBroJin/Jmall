@@ -2,6 +2,8 @@ package com.Jmall.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.Jmall.domain.BoardVO;
-import com.Jmall.domain.Criteria;
+import com.Jmall.dto.Criteria;
+import com.Jmall.domain.MemberVO;
 import com.Jmall.domain.PageDTO;
 import com.Jmall.service.BoardService;
 
@@ -49,7 +52,7 @@ public class BoardController {
 	// 매핑주소 /board/register
 	// 저장버튼 클릭후 글쓰기 저장
 	@PostMapping("/register")
-	public String register(BoardVO board) {
+	public String register(BoardVO board, HttpSession session) {
 
 		log.info("게시판 입력데이터: " + board); // board.toString()
 		// db저장.
@@ -57,6 +60,8 @@ public class BoardController {
 		 * 1)BoardMapper인터페이스와 BoardMapper.xml 작업 2)BoardService인터에피스와 BoardServiceImpl
 		 * 작업
 		 */
+		String mbsp_id = ((MemberVO) session.getAttribute("loginStatus")).getMbsp_id();
+		board.setWriter(mbsp_id);
 		boardService.register(board);
 
 		return "redirect:/board/list"; // 주소는 절대경로
